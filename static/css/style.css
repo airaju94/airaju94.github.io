@@ -1,0 +1,20 @@
+*:after,*:before {
+	box-sizing: border-box;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	font-size: 17px;
+	font-weight: 17px;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+.navbar-brand,h1,.bold {
+	font-weight: 700;
+}
