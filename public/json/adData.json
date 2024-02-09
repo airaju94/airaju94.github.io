@@ -1,0 +1,53 @@
+{
+	"config": {
+		"inFrameAllAds": false,
+		"ad728DefaultDelay": false,
+		"ad728MaxRotation": 3,
+		"ad728Rotation": 0,
+		"ad728Index": 0,
+		"ad300DefaultDelay": false,
+		"ad300Index": 0,
+		"ad300MaxRotation": 3,
+		"ad300Rotation": 0,
+		"displayPopBannerAfter": 1000,
+		"maxShowPopBannerPerUser": 3,
+		"delayBetweenPopBannerShow": 30000,
+		"ad728InitialAd": false,
+		"ad728InitialAdDelay": 30000
+	},
+	
+	"ad728":[
+		{
+			"name": "a_ads0",
+			"size": "728x90",
+			"ad_code": "<script type=\"text/javascript\">\n\tatOptions = {\n\t\t'key' : '14c24138c2ad13b276ad78f45381b79a',\n\t\t'format' : 'iframe',\n\t\t'height' : 90,\n\t\t'width' : 728,\n\t\t'params' : {}\n\t};\n\tdocument.write('<scr' + 'ipt type=\"text/javascript\" src=\"//www.topcreativeformat.com/14c24138c2ad13b276ad78f45381b79a/invoke.js\"></scr' + 'ipt>');\n<\/script>",
+			"inFrame": true,
+			"expire":30000
+		},
+		
+		{
+			"name": "a_ads1",
+			"size": "728x90",
+			"ad_code": "<iframe data-aa='2145099' src='//ad.a-ads.com/2145099?size=728x90' style='width:728px; height:90px; border:0px; padding:0; overflow:hidden; background-color: transparent;'></iframe>",
+			"expire":30000
+		}
+	],
+	
+	"ad300":[
+			{
+				"name": "a_ads0",
+				"size": "300x250",
+				"ad_code": "\n\t\t<script type=\"text/javascript\">\n\t\t\tatOptions = {\n\t\t\t\t'key' : '2be748b0e0c3d30f43e83de543ff49eb',\n\t\t\t\t'format' : 'iframe',\n\t\t\t\t'height' : 250,\n\t\t\t\t'width' : 300,\n\t\t\t\t'params' : {}\n\t\t\t};\n\t\t\tdocument.write('<scr' + 'ipt type=\"text/javascript\" src=\"//www.topcreativeformat.com/2be748b0e0c3d30f43e83de543ff49eb/invoke.js\"></scr' + 'ipt>');\n\t\t<\/script>\n",
+				"inFrame": true,
+				"expire":30000
+			},
+			
+			{
+				"name": "a_ads1",
+				"size": "300x250",
+				"ad_code": "<iframe data-aa='2236168' src='//ad.a-ads.com/2236168?size=300x250' style='width:300px; height:250px; border:0px; padding:0; overflow:hidden; background-color: transparent;'></iframe>",
+				"expire":30000
+			}
+			
+		]
+}
