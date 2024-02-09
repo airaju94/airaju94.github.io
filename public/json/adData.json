@@ -24,13 +24,6 @@
 			"inFrame": true,
 			"expire":30000
 		},
-		
-		{
-			"name": "Ad2bitcoin",
-			"size": "728x90",
-			"ad_code": "<iframe src='https://ad2bitcoin.com/ad.php?ref=mediazone1266&width=728' marginwidth='0' marginheight='0' width='728' height='90' scrolling='no' border='0' frameborder='0'></iframe>",
-			"expire":15000
-		},
 		{
 			"name": "a_ads",
 			"size": "728x90",
