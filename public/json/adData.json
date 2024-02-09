@@ -26,9 +26,9 @@
 		},
 		
 		{
-			"name": "a_ads1",
+			"name": "Ad2bitcoin",
 			"size": "728x90",
-			"ad_code": "<iframe data-aa='2145099' src='//ad.a-ads.com/2145099?size=728x90' style='width:728px; height:90px; border:0px; padding:0; overflow:hidden; background-color: transparent;'></iframe>",
+			"ad_code": "<iframe src='https://ad2bitcoin.com/ad.php?ref=mediazone1266&width=728' marginwidth='0' marginheight='0' width='728' height='90' scrolling='no' border='0' frameborder='0'></iframe>",
 			"expire":30000
 		}
 	],
