@@ -12,7 +12,7 @@
 		"displayPopBannerAfter": 1000,
 		"maxShowPopBannerPerUser": 3,
 		"delayBetweenPopBannerShow": 30000,
-		"ad728InitialAd": false,
+		"ad728InitialAd": true,
 		"ad728InitialAdDelay": 30000
 	},
 	
@@ -29,8 +29,14 @@
 			"name": "Ad2bitcoin",
 			"size": "728x90",
 			"ad_code": "<iframe src='https://ad2bitcoin.com/ad.php?ref=mediazone1266&width=728' marginwidth='0' marginheight='0' width='728' height='90' scrolling='no' border='0' frameborder='0'></iframe>",
+			"expire":15000
+		},
+		{
+			"name": "a_ads",
+			"size": "728x90",
+			"ad_code": "<iframe data-aa='2301572' src='//ad.a-ads.com/2301572?size=728x90' style='width:728px; height:90px; border:0px; padding:0; overflow:hidden; background-color: transparent;'></iframe>",
 			"expire":30000
-		}
+		},
 	],
 	
 	"ad300":[
