@@ -13,7 +13,7 @@
 		"maxShowPopBannerPerUser": 3,
 		"delayBetweenPopBannerShow": 30000,
 		"ad728InitialAd": true,
-		"ad728InitialAdDelay": 30000
+		"ad728InitialAdDelay": 40000
 	},
 	
 	"ad728":[
@@ -22,13 +22,13 @@
 			"size": "728x90",
 			"ad_code": "\n<ins class='65b28a13e76bba28b965b3aa' style='display:inline-block;width:728px;height:90px;'></ins><script>!function(e,n,c,t,o,r,d){!function e(n,c,t,o,r,m,d,s,a){s=c.getElementsByTagName(t)[0],(a=c.createElement(t)).async=!0,a.src='https://'+r[m]+'/js/'+o+'.js?v='+d,a.onerror=function(){a.remove(),(m+=1)>=r.length||e(n,c,t,o,r,m)},s.parentNode.insertBefore(a,s)}(window,document,'script','65b28a13e76bba28b965b3aa',['cdn.bmcdn6.com'], 0, new Date().getTime())}();<\/script>\n",
 			"inFrame": true,
-			"expire":30000
+			"expire":40000
 		},
 		{
 			"name": "a_ads",
 			"size": "728x90",
 			"ad_code": "<iframe data-aa='2301572' src='//ad.a-ads.com/2301572?size=728x90' style='width:728px; height:90px; border:0px; padding:0; overflow:hidden; background-color: transparent;'></iframe>",
-			"expire":30000
+			"expire":40000
 		},
 		{
 			"name": "Advertica",
@@ -45,14 +45,14 @@
 				"size": "300x250",
 				"ad_code": "\n<ins class='6435019da9ce34cf0a8a3cd1' style='display:inline-block;width:300px;height:250px;'></ins><script>!function(e,n,c,t,o,r,d){!function e(n,c,t,o,r,m,d,s,a){s=c.getElementsByTagName(t)[0],(a=c.createElement(t)).async=!0,a.src='https://'+r[m]+'/js/'+o+'.js?v='+d,a.onerror=function(){a.remove(),(m+=1)>=r.length||e(n,c,t,o,r,m)},s.parentNode.insertBefore(a,s)}(window,document,'script','6435019da9ce34cf0a8a3cd1',['cdn.bmcdn6.com'], 0, new Date().getTime())}();<\/script>\n",
 				"inFrame": true,
-				"expire":30000
+				"expire":40000
 			},
 			
 			{
 				"name": "a_ads",
 				"size": "300x250",
 				"ad_code": "<iframe data-aa='2301573' src='//ad.a-ads.com/2301573?size=300x250' style='width:300px; height:250px; border:0px; padding:0; overflow:hidden; background-color: transparent;'></iframe>",
-				"expire":30000
+				"expire":40000
 			},
 			{
 				"name": "Advertica",
