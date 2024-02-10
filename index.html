@@ -46,12 +46,11 @@
       #_spnr noscript { max-width: 500px; }
       #_spnr a { color: orange; }
     </style>
-    <script src="/public/js/AdRotator.js?v=9"></script>
     <link href="/public/css/fonts.css" rel="stylesheet" />
     <link href="/public/bundles/app.min.css" rel="stylesheet" />
     <style>
-      *{padding:0;margin:0;box-sizing:border-box}.hide{display:none}.show{display:inherit}.fixed-banner{position:fixed;bottom:0;width:100%;max-height:100px;height:auto;background:transparent;text-align:center;z-index:999999}#btt{display:none!important}.fluid-ad{height:72px;width:585px;margin:auto;padding:0px!important;text-align:center;overflow:hidden}.fluid-ad iframe,.fluid-ad img{height:90px;width:728px;border:none;overflow:none}.fluid-ad iframe,.fluid-ad img{transform-origin:0% 0}.fluid-ad iframe,.fluid-ad img{-webkit-transform:scale(.8);-webkit-transform-origin:0 0;-moz-transform:scale(.8);-moz-transform-origin:0 0;-o-transform:scale(.8);-o-transform-origin:0 0;-ms-transform:scale(.8);-ms-transform-origin:0 0;transform:scale(.8);transform-origin:0 0}@media screen and (max-width:768px){.fluid-ad{height:66px;width:533px}.fluid-ad iframe,.fluid-ad img{-webkit-transform:scale(.73);-webkit-transform-origin:0 0;-moz-transform:scale(.73);-moz-transform-origin:0 0;-o-transform:scale(.73);-o-transform-origin:0 0;-ms-transform:scale(.73);-ms-transform-origin:0 0;transform:scale(.73);transform-origin:0 0}}@media screen and (max-width:640px){.fluid-ad{height:58px;width:468px}.fluid-ad iframe,.fluid-ad img{-webkit-transform:scale(.64);-webkit-transform-origin:0 0;-moz-transform:scale(.64);-moz-transform-origin:0 0;-o-transform:scale(.64);-o-transform-origin:0 0;-ms-transform:scale(.64);-ms-transform-origin:0 0;transform:scale(.64);transform-origin:0 0}}@media screen and (max-width:500px){.fluid-ad{height:40px;width:327.5px}.fluid-ad iframe,.fluid-ad img{-webkit-transform:scale(.45);-webkit-transform-origin:0 0;-moz-transform:scale(.45);-moz-transform-origin:0 0;-o-transform:scale(.45);-o-transform-origin:0 0;-ms-transform:scale(.45);-ms-transform-origin:0 0;transform:scale(.45);transform-origin:0 0}}@media screen and (max-width:320px){.fluid-ad{height:41px;width:100%}}.popBanner-ad{position:fixed;z-index:999999;right:0;bottom:15%;width:239px;height:199px;background:transparent;margin-right:10px;border:none;box-shadow:0 .125rem .25rem rgba(0,0,0,.2)}.popBanner-ad .popBanner-ad-close{width:40px;margin:auto;padding:2px 4px;background:#FF004D;margin-top:-19px;font-size:12px;cursor:pointer;font-family:sans-serif;border-top-left-radius:2px;border-top-right-radius:2px;color:#fff;font-weight:700}.ad300{overflow:hidden}.popBanner-ad .ad300 iframe,.popBanner-ad .ad300 img{height:250px;width:300px;border:none;overflow:none}.popBanner-ad .ad300 iframe,.popBanner-ad .ad300 img{transform-origin:0% 0;-webkit-transform:scale(.795);-webkit-transform-origin:0 0;-moz-transform:scale(.795);-moz-transform-origin:0 0;-o-transform:scale(.795);-o-transform-origin:0 0;-ms-transform:scale(.795);-ms-transform-origin:0 0;transform:scale(.795);transform-origin:0 0}footer{padding:20px;background:#1f2733;border-top:1px solid #444;text-align:center}footer .link-list{margin:10px 0}footer .link-list a{margin:0 5px;color:#FF8911}.copyright{color:#666;font-size:12px}.disclaimer{padding:15px;color:#999;font-size:13px;background:#1f2733;line-height:1rem}.disclaimer strong{color:#FF8911!important}
-  </style>
+.sticky-ads{ position: fixed; bottom: 0; left: 0; width: 100%; height: 100%; max-height: 250px; padding: 0px 0; box-shadow: 0 -6px 18px 0 rgba(9,32,76,.1); -webkit-transition: all .1s ease-in; transition: all .1s ease-in; display: flex; align-items: center; justify-content: center; background-color: #fefefe; z-index: 999999; }.sticky-ads-close { width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; border-radius: 12px 0 0; position: absolute; right: 0; top: -30px; background-color: #fefefe; box-shadow: 0 -6px 18px 0 rgba(9,32,76,.08); cursor:pointer;} .sticky-ads .sticky-ads-close svg { width: 22px; height: 22px; fill: #000; } .sticky-ads .sticky-ads-content { overflow: hidden; display: block; position: relative; height: auto; width: 100%;text-align:center}
+    </style>
   </head>
   <body>
 
@@ -90,7 +89,14 @@
       <br />
     </footer>
 
-    <div class="popBanner"></div>
+<div class="sticky-ads" id="sticky-ads">
+	<div class="sticky-ads-close" onclick="document.getElementById('sticky-ads').style.display='none'"><svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d='M278.6 256l68.2-68.2c6.2-6.2 6.2-16.4 0-22.6-6.2-6.2-16.4-6.2-22.6 0L256 233.4l-68.2-68.2c-6.2-6.2-16.4-6.2-22.6 0-3.1 3.1-4.7 7.2-4.7 11.3 0 4.1 1.6 8.2 4.7 11.3l68.2 68.2-68.2 68.2c-3.1 3.1-4.7 7.2-4.7 11.3 0 4.1 1.6 8.2 4.7 11.3 6.2 6.2 16.4 6.2 22.6 0l68.2-68.2 68.2 68.2c6.2 6.2 16.4 6.2 22.6 0 6.2-6.2 6.2-16.4 0-22.6L278.6 256z'/></svg></div>
+	<div class="sticky-ads-content">
+		<iframe data-aa='2301573' src='//ad.a-ads.com/2301573?size=300x250' style='width:300px; height:250px; border:0px; padding:0; overflow:hidden; background-color: transparent;'></iframe>
+	</div>
+</div>
+	  
+<!--     <div class="popBanner"></div>
     <div class="fixed-banner">
         <div class="fluid-ad ad728">
 		<iframe data-aa='2301572' src='//ad.a-ads.com/2301572?size=728x90' style='width:728px; height:90px; border:0px; padding:0; overflow:hidden; background-color: transparent;'></iframe>
@@ -99,7 +105,7 @@
     <script>
        AdRotator.set('/public/json/adData.json');
        AdRotator.start();
-    </script>
+    </script> -->
 
     <script src="/public/js/crypto-js.min.js?v=1"></script>
     <script src="/public/bundles/app.min.js"></script>
