@@ -9,7 +9,7 @@
 		"ad300Index": 0,
 		"ad300MaxRotation": 3,
 		"ad300Rotation": 0,
-		"displayPopBannerAfter": 1000,
+		"displayPopBannerAfter": 0,
 		"maxShowPopBannerPerUser": 3,
 		"delayBetweenPopBannerShow": 30000,
 		"ad728InitialAd": true,
