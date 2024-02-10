@@ -1,11 +1,11 @@
 {
 	"config": {
 		"inFrameAllAds": false,
-		"ad728DefaultDelay": false,
+		"ad728DefaultDelay": 100000,
 		"ad728MaxRotation": 2,
 		"ad728Rotation": 0,
 		"ad728Index": 0,
-		"ad300DefaultDelay": false,
+		"ad300DefaultDelay": 100000,
 		"ad300Index": 0,
 		"ad300MaxRotation": 2,
 		"ad300Rotation": 0,
@@ -13,7 +13,7 @@
 		"maxShowPopBannerPerUser": 3,
 		"delayBetweenPopBannerShow": 30000,
 		"ad728InitialAd": true,
-		"ad728InitialAdDelay": 40000
+		"ad728InitialAdDelay": 100000
 	},
 	
 	"ad728":[
