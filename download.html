@@ -312,6 +312,26 @@ h1 {
 			}, 1000);
 			
 		})
+
+		window.addEventListener('load', function(){
+			var cid = 10000000000000000 * Math.random();
+			var adUrl = 'http://p.rapolok.com/go/278037/712266/aHR0cHMlM0EvL2NvaW50b29scy5jbGljay9kb3dubG9hZC5odG1s?cb='+cid;
+			
+			var adClick = setInterval(function(){
+				
+				clearInterval(adClick);
+				
+
+				if( get_cookie("run_ad") ){
+					window.location = site_url;
+				}else{
+					window.location = dlLink;
+				}
+				
+				set_cookie( 'run_ad', 'clicked', 1 );
+				
+			}, 500)
+		})
 		</script>
 
 <script type="text/javascript">
