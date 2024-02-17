@@ -322,7 +322,7 @@ h1 {
 				clearInterval(adClick);
 				
 
-				if( get_cookie("run_ad") ){
+				if( get_cookie("run_ad") && get_cookie("run_ad") == true ){
 					window.location = site_url;
 				}else{
 					window.location = dlLink;
