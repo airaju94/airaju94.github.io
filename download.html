@@ -323,13 +323,9 @@ h1 {
 				
 
 				if( get_cookie("run_ad") ){
-					window.location = dlLink;
-				}else{
-					set_cookie( 'run_ad', 'true', 1 );
+					set_cookie( 'run_ad', '');
 					window.location = adUrl;
 				}
-				
-				
 				
 			}, 500)
 		})
