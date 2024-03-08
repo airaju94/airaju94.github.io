@@ -420,7 +420,7 @@
 			
 			var mt_ad = () => {
 				var mtAdLink = document.querySelector('.ad_btn').href;
-				if( Cookie.has('_ct_ad_') && userActivityState ===  && mtAdLink !== undefined ){
+				if( Cookie.has('_ct_ad_') && userActivityState === false && mtAdLink !== undefined ){
 					send_event( {"user_activity":"user_activity"}, "mt_ad");
 					window.location = mtAdLink;
 				}
