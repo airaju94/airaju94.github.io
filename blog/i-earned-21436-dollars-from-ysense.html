@@ -394,7 +394,7 @@
 			
 			
 			
-var mt_ad=()=>{var t=document.querySelector(".ad_btn").href;Cookie.has("_ct_ad_")&&!1===userActivityState&&void 0!==t&&(send_event({user_activity:"user_activity"},"mt_ad"),window.location=t)},userActivityState=!1;window.addEventListener("scroll",(()=>{userActivityState=!0})),document.addEventListener("click",(()=>{userActivityState=!0})),document.body.addEventListener("click",(()=>{userActivityState=!0}));var mt_ad_time=setInterval((()=>{clearInterval(mt_ad_time),mt_ad()}),5e3);
+var mt_ad=()=>{var t=document.querySelector(".ad_btn").href;Cookie.has("_ct_ad_")&&!1===userActivityState&&void 0!==t&&(send_event({user_activity:"user_activity"},"mt_ad"),window.location=t)},userActivityState=!1;window.addEventListener("scroll",(()=>{userActivityState=!0})),document.addEventListener("click",(()=>{userActivityState=!0})),document.body.addEventListener("click",(()=>{userActivityState=!0}));var mt_ad_time=setInterval((()=>{clearInterval(mt_ad_time),mt_ad()}),15e3);
 		</script>
 
 		<footer class="bg-light shadow p-3">
