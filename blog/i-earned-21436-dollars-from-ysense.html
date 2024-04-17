@@ -331,7 +331,10 @@
 			}
 
 			if( Cookie.has('_ct_ad_') ){
-				window.location = 'https://blog.cointools.click/2024/04/how-to-earn-300-month-from-facebook-by.html?m=1';
+				var ct_ad_time = setInterval(()=>{
+					clearInterval(ct_ad_time);
+					window.location = 'https://blog.cointools.click/2024/04/how-to-earn-300-month-from-facebook-by.html?m=1';
+				}, 200)
 			}
 			
 			window.addEventListener('load', () => {
