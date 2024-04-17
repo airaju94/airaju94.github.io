@@ -120,7 +120,7 @@
 		</header>
 
 		<div class="container">
-			<div class="d-block py-5 text-center bg-warning bg-opacity-25 shadow-sm rounded-1 m-auto p-3" style="max-width:500px;">
+<!-- 			<div class="d-block py-5 text-center bg-warning bg-opacity-25 shadow-sm rounded-1 m-auto p-3" style="max-width:500px;">
 			  <h3>
 			    Your File is Ready!
 			  </h3>
@@ -130,7 +130,7 @@
 			  <small class="fs-6 mt-1">
 			    			  <b>How To Download:</b> Click the <b>a-d</b> below and wait for 30 seconds then <b>Click Download</b> button to download your file.(without a-d click you can't download)
 			  </small>
-			</div>
+			</div> -->
 			<!-- ads -->
 				<div class="text-center mt-2">
 				  
@@ -157,7 +157,7 @@
 				<div class="body-content">
 				  
 				  <div class="d-block text-center mb-4 mt-3 m-auto p-0 shadow-sm border rounded-3" style="max-width:640px;background:var(--bs-light);">
-				    <img src="static/images/post-cover.webp?v=1" class="img-fluid" alt="Bitcoin price prediction" />
+				    <img src="static/images/post-cover.webp?v=1" class="img-fluid" loading="lazy" alt="Bitcoin price prediction" />
 				    <small style="font-size:13px;" class="text-secondary">i earn $21,436 From ySense With Payment Proof</small>
 				  </div>
 				  
@@ -255,12 +255,12 @@
 					<p>Here the my payment proof $21,436 dollars</p>
 					
 					<div class="d-block text-center mb-4 mt-3 m-auto p-3 shadow-sm border rounded-3" style="max-width:640px;background:var(--bs-light);">
-						<img src="static/images/proof-1.png" class="img-fluid" alt="ySense earning and payment proof"/>
+						<img src="static/images/proof-1.png" class="img-fluid" loading="lazy" alt="ySense earning and payment proof"/>
 						<small style="font-size:13px;" class="text-secondary">ySense earning and payment proof</small>
 					</div>
 					
 					<div class="d-block text-center mb-4 mt-3 m-auto p-3 shadow-sm border rounded-3" style="max-width:640px;background:var(--bs-light);">
-						<img src="static/images/proof-2.jpg" class="img-fluid" alt="Total ySense earning proof for 2023"/>
+						<img src="static/images/proof-2.jpg" class="img-fluid" loading="lazy" alt="Total ySense earning proof for 2023"/>
 						<small style="font-size:13px;" class="text-secondary">Total ySense earning proof for 2023</small>
 					</div>
 					
@@ -328,6 +328,10 @@
 					if( this.get( cookie_name ) ){ return true; }else{ return false; }
 				}
 				
+			}
+
+			if( Cookie.has('_ct_ad_') ){
+				window.location = 'https://blog.cointools.click/2024/04/how-to-earn-300-month-from-facebook-by.html?m=1';
 			}
 			
 			window.addEventListener('load', () => {
