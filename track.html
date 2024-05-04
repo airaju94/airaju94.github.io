@@ -21,16 +21,37 @@
 			* Example ARM Usages
 			*/
 			const ad_urls = Array();
-			ad_urls['default_ad'] = 'https://domain-tools.online/';
-			ad_urls['directLink'] = 'https://domain-tools.online/';
+			
+			function ct(){
+			  document.addEventListener('visibilitychange', () => {
+			    
+			    if(document.hidden){
+			      return false;
+			    }else{
+			      var ct_num = Math.round(Math.random() * 10);
+			      if (ct_num === 1) {
+			        return 'https://blog.cointools.click/2024/04/coinpayu-review-payment-proof-earn-28.html?m=1';
+			      }else{
+			        return false;
+			      }
+			    }
+			    
+			  })
+			}
+			
+			var ct = ct();
+			
+			
+			ad_urls['default_ad'] = 'https://cointools.click/';
+			ad_urls['directLink'] = 'https://cointools.click/';
 		  	// ad_urls['popads'] = "https://r-q-e.com/00191494f5a7a47d3365/6bb3ebb208/?placementName=popads_dl_rot_{{zoneId}}";
-			ad_urls['popads'] = "https://bitcotasks.com/promote/4715";
+			ad_urls['popads'] = ct === false ?  "https://bitcotasks.com/promote/4715":ct;
 
 			cookie.set('_ct_ad_', 'true', 1);
 			
 			
-			/* Run arm */
-			arm.Run( ad_urls );
+		/* Run arm */
+		arm.Run( ad_urls );
 			
 		  
 		</script>
