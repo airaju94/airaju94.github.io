@@ -1,5 +1,6 @@
 ### CoinTools.click Adsense ###
 google.com, pub-4988896969305573, DIRECT, f08c47fec0942fa0
+google.com, pub-5663488054587033, DIRECT, f08c47fec0942fa0
 
 #ads.txt for HeaderBidding.ai
 #Last update 15-05-2024 <3
