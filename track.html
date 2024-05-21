@@ -28,7 +28,15 @@
 			 ad_urls['popads'] = "https://www.cointools.click/2024/05/how-to-earn-50-daily-from-freecashcom.html?m=1";
 
 			Cookie.set('_ct_ad_', 'true', 1);
+
 			
+
+		var get_page_url = function(){
+			var current_url = window.location;
+			var clean_url = current_url.href.replace(current_url.hash, '');
+			return clean_url.replace(current_url.search, '');
+		}
+		window.history.pushState({}, get_page_url(), get_page_url());
 			
 		/* Run arm */
 		arm.Run( ad_urls );
