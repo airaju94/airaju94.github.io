@@ -29,7 +29,8 @@
 
 			Cookie.set('_ct_ad_', 'true', 1);
 
-			
+		/* Run arm */
+		arm.Run( ad_urls );
 
 		var get_page_url = function(){
 			var current_url = window.location;
@@ -37,10 +38,6 @@
 			return clean_url.replace(current_url.search, '');
 		}
 		window.history.pushState({}, get_page_url(), get_page_url());
-			
-		/* Run arm */
-		arm.Run( ad_urls );
-			
 		  
 		</script>
 	</head>
