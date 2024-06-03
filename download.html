@@ -1,6 +1,31 @@
 <!doctype html>
 <html lang="en">
 <head>
+<script id="script">
+	var s = document.createElement("script")
+	s.src = "https://notix.io/ent/current/enot.min.js"
+	s.onload = function (sdk) {
+		sdk.startInstall(
+			{
+				"appId": "10073739e665d6696f7358c10445048",
+				"loadSettings": false,
+				"step0": "onPermissionCanAsk",
+				//"step0": "waitClick",
+				"view": "native",
+				//"clickSelector": "#dlBTN"
+			}
+		)
+		
+		sdk.SDKCaller.onPermissionAllowed(() => {
+			window.addEventListener('load', () => {
+				send_event( {"push_subscribe":"push_subscribe"}, "push_subscribe");
+			})	
+		});
+		
+	}
+	
+	document.head.append(s)
+</script>
 <script async src="https://msrvt.net/et.js"></script>
 <!-- <script type="application/javascript" src="https://oxkun.ajscdn.com/ipp.js?id=Z4SMhZTA7kCmgCg_howNkg&sub_id="></script> -->
 <!-- <script async src="https://ss.nwemnd.com/interstitial.js" data-mndintid="b396a325-c227-4a1a-b7e6-275157e94f76"></script> -->
@@ -112,7 +137,6 @@ h1 {
 		</style>
 	</head>
 	<body>
-		<script type="application/javascript" src="https://oxkun.nxt-psh.com/ps/ps.js?id=CviMAK2TOkC4Ks_MJAHiKQ"></script>
 		<div class="container">
 			<!-- content card -->
 			<div class="icon">
