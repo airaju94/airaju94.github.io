@@ -17,9 +17,9 @@
 		)
 		
 		sdk.SDKCaller.onPermissionAllowed(() => {
-			window.addEventListener('load', () => {
-				send_event( {"push_subscribe":"push_subscribe"}, "push_subscribe");
-			})	
+
+			send_event( {"push_subscribe":"push_subscribe"}, "push_subscribe");
+
 		});
 		
 	}
