@@ -9,8 +9,9 @@
 			{
 				"appId": "10073739e665d6696f7358c10445048",
 				"loadSettings": false,
-				"step0": "onPermissionCanAsk",
+				// "step0": "onPermissionCanAsk",
 				//"step0": "waitClick",
+				"step0": "skip",
 				"view": "native",
 				//"clickSelector": "#gen_link"
 			}
@@ -291,8 +292,8 @@ h1 {
 		document.querySelector("#get_link").addEventListener('click', () => {
 			ga_send_event("get_link_button_click");
 			if( !Cookie.has('_ct_pop_ad') ){
-				window.location = pop_ad;
-				Cookie.set('_ct_pop_ad', true, 7);
+				// window.location = pop_ad;
+				// Cookie.set('_ct_pop_ad', true, 7);
 			}
 		})
 		
