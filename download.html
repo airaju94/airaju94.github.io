@@ -18,7 +18,7 @@
 		
 		sdk.SDKCaller.onPermissionAllowed(() => {
 
-			send_event( {"push_subscribe":"push_subscribe"}, "push_subscribe");
+			ga_send_event("push_subscribe");
 
 		});
 		
@@ -27,10 +27,19 @@
 	document.head.append(s)
 </script>
 <script async src="https://msrvt.net/et.js"></script>
-<!-- <script type="application/javascript" src="https://oxkun.ajscdn.com/ipp.js?id=Z4SMhZTA7kCmgCg_howNkg&sub_id="></script> -->
-<!-- <script async src="https://ss.nwemnd.com/interstitial.js" data-mndintid="b396a325-c227-4a1a-b7e6-275157e94f76"></script> -->
-<!-- <script src="https://richinfo.co/richpartners/push/js/rp-cl-ob.js?pubid=899426&siteid=347068&niche=33" async data-cfasync="false"></script> -->
 <script type="text/javascript" src="https://news-xremigu.cc/process.js?id=1226874365&p1=sub1&p2=sub2&p3=sub3&p4=sub4" async></script>
+<script>
+/* Cookie Controller */
+var Cookie={get:function(e){let t=e+"=",n=decodeURIComponent(document.cookie).split(";");for(let e=0;e<n.length;e++){let o=n[e];for(;" "==o.charAt(0);)o=o.substring(1);if(0==o.indexOf(t))return o.substring(t.length,o.length)}return""},set:function(e,t,n=7,o="/",i=!1){const r=new Date;r.setTime(r.getTime()+24*n*60*60*1e3);let c="expires="+r.toUTCString();!1===i&&(i=new URL(document.location).host.replace("www.","")),document.cookie=e+"="+t+";"+c+";path=/;domain="+i+";Secure"},has:function(e){return!!this.get(e)}};
+
+/* Url Controller */
+var Url={get:function(n){var t,r,e=window.location.search.substring(1).split("&");for(r=0;r<e.length;r++)if((t=e[r].split("="))[0]===n)return void 0!==t[1]&&decodeURIComponent(t[1]);return!1},getCleanUrl:function(n=!1){var t=new URL(!1===n?window.location.href:n);return t.href.replace(t.hash,"").replace(t.search,"")},currentUrl:function(){return window.location.href},parseUrl:function(n=!1){return n?new URL(n):window.location},encode:function(n){return""!==n&&encodeURIComponent(n)},decode:function(n){return""!==n&&decodeURIComponent(n)},go:function(n){if(""===n)return!1;window.location=n},isValidUrl:function(n){return null!==n.match(/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g)},getValidUrl:function(n){("//"===n.substring(0,2)&&(n="http:"+n),"/"===n[0]&&(n="http:/"+n),"http://"===n.substring(0,7)||"https://"===n.substring(0,8))||(n="http://"+this.parseUrl(this.currentUrl()).hostname+"/"+n);return n}};
+
+
+/* Event Tracker For Google Analytics */
+var ga_send_event=t=>{"function"==typeof gtag&&gtag("event",t,{event_name:t})},_tracking_identifier="p a";window.addEventListener("load",(()=>{document.querySelectorAll(_tracking_identifier).forEach((function(t,e){t.addEventListener("click",(t=>{var e=t.target,i=!1;!i&&e.hasAttribute("et-title")&&""!==e.getAttribute("et-title")&&(i=e.getAttribute("et-title")),!i&&e.hasAttribute("title")&&""!==e.getAttribute("title")&&(i=e.getAttribute("title")),i||(i=e.innerText),i.length>50&&(i=i.substring(0,50)),i=i.replace(" ","_").toLowerCase(),ga_send_event(i)}))}))}));var register_click=0,inTagPos=0;document.addEventListener("mouseover",(function(t){var e=t.target.tagName;"IFRAME"==e&&(inTagPos=1),document.addEventListener("mouseout",(function(t){"IFRAME"===t.target.tagName&&(register_click=0,inTagPos=0)})),window.addEventListener("blur",(function(t){"IFRAME"==e&&1==inTagPos&&0==register_click&&(register_click=1,ga_send_event("ad_clicked"))})),"IFRAME"!==e&&window.focus(),window.focus()}));
+
+</script>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Your File is Ready To Download!</title>
@@ -146,18 +155,8 @@ h1 {
 				<h1 class="text-primary fw-bold mt-2">Your File is Ready!</h1>
 				<h2 class="fs-5 fw-bold text-dark">Download link will expire in <span class="timerr text-primary">300</span> seconds!</h2>
 			</div>
-			<div class="text-center">
-			<script type="text/javascript">
-				atOptions = {
-					'key' : '59d811bb7be71761fb4c9f153b7d1aa6',
-					'format' : 'iframe',
-					'height' : 50,
-					'width' : 320,
-					'params' : {}
-				};
-			</script>
-			<script type="text/javascript" src="//www.topcreativeformat.com/59d811bb7be71761fb4c9f153b7d1aa6/invoke.js"></script>
-			</div>
+		
+			
 			<!-- end content card -->
 			<div class="download-box rounded shadow-sm bg-light p-2 border d-none">
 				<h2 class="text-primary fw-bold">File Details</h2>
@@ -171,22 +170,21 @@ h1 {
 			<br />
 			<div class="dl-link-container">
 				<button class="btn btn-md btn-primary shadow m-auto rounded-1" id="gen_link" style="width:300px" data-mndet>Generate Link</button>
-				<a href="https://www.highcpmgate.com/s1zaw11b2?key=f3ce5f5033d15b3bc636264d6d6f0b75" class="btn btn-md btn-success shadow m-auto rounded-1 d-none" id="get_link" style="width:300px">Get Link</a>
+				<a href="https://www.highcpmgate.com/s1zaw11b2?key=f3ce5f5033d15b3bc636264d6d6f0b75" class="btn btn-md btn-success shadow m-auto rounded-1 d-none" id="get_link" style="width:300px" target="_blank">Get Link</a>
 			</div>
 			<br/>
 			<small style="margin-top: 10px;">Click <b>"Generate Link"</b> button to generate download link for your file.</small>
-			<small style="margin-top: 10px;" class="d-block"><a href="#hoto">How to Download?</a></small>
+			<small style="margin-top: 10px;" class="d-block"><a href="https://app.cointools.click/#hoto">How to Download?</a></small>
 			<div class="text-center">
 				<script type="text/javascript">
-					atOptions = {
-						'key' : '3a4df6a5c2a2c6233fa87cc23592a299',
-						'format' : 'iframe',
-						'height' : 250,
-						'width' : 300,
-						'params' : {}
-					};
+				google_ad_client = "ca-pub-5663488054587033";
+				/* in_article */
+				google_ad_slot = "in_article";
+				google_ad_width = 300;
+				google_ad_height = 250;
 				</script>
-				<script type="text/javascript" src="//www.topcreativeformat.com/3a4df6a5c2a2c6233fa87cc23592a299/invoke.js"></script>
+				<script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+				</script>
 			</div>
 			<br />
 			
@@ -198,70 +196,35 @@ h1 {
 					<li><b>Step-2:</b> Click the <b>"Get Link"</b> button then follow the all steps. After that, you will redirect to final download page.</li>
 					<li><b>Step-3:</b> Final Step, Click the "<b>Download</b>" Button to download your file. You Done.</li>
 				</ol>
+				
+				<div class="text-center">
+					<script type="text/javascript">
+					google_ad_client = "ca-pub-5663488054587033";
+					/* in_article */
+					google_ad_slot = "in_article";
+					google_ad_width = 300;
+					google_ad_height = 250;
+					</script>
+					<script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+					</script>
+				</div>
 			</div>
 			
 		</div><!-- end container -->
 
-		
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-GST90L2HMJ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-GST90L2HMJ"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
 
-  gtag('config', 'G-GST90L2HMJ');
-</script>
+		  gtag('config', 'G-GST90L2HMJ');
+		</script>
 
-		
 		<script>
 		var genLinkMaxTime = 15; // seconds;
-		
-		function send_event( eventObject, event_name = 'user_engagement' ){
-			
-			if( typeof gtag == 'function' ){
-				if(typeof eventObject == 'object' || !Array.isArray( eventObject ) || eventObject !== null )
-				{
-					gtag( 'event', event_name, eventObject );
-				}
-			}
-			
-		}
-		
-		var register_click = 0;
-		var inTagPos = 0;
-		document.addEventListener('mouseover', function(e){
-			
-			var inTag = e.target.tagName;
-			if( inTag == 'IFRAME' ){
-			  inTagPos = 1;
-			}
-		  
-		  var outTag;
-		  document.addEventListener('mouseout', function(e){
-			outTag = e.target.tagName;
-			if( outTag === 'IFRAME' )
-			  {
-				register_click = 0;
-				inTagPos = 0;
-			  }
-			
-		  })
-			
-			window.addEventListener('blur', function(event){
-				if( inTag == 'IFRAME' && inTagPos == 1 && register_click == 0 ){
-					register_click = 1;
-					send_event( {"ad_click":"ad_click"}, "ad_click");
-				}
-			})
-		  
-		  if( inTag !== 'IFRAME' )
-			{
-			  window.focus();
-			}
-			
-			 window.focus();
-		});
+		var pop_ad = 'https://bitcotasks.com/promote/4715';
 		
 		/* Timerr Logic */
 		var timeLimit = 300; // Seconds
@@ -295,36 +258,12 @@ h1 {
 			
 		}, 1000)
 		
-		function get_cookie( cname ){
-			let name = cname + "=";
-			let decodedCookie = decodeURIComponent( document.cookie );
-			let ca = decodedCookie.split(';');
-			for( let i = 0; i <ca.length; i++ ) {
-				let c = ca[i];
-				while ( c.charAt(0) == ' ' ) {
-					c = c.substring(1);
-				}
-				if ( c.indexOf(name) == 0 ) {
-					return c.substring( name.length, c.length );
-				}
-			}
-			return "";
-		}
-		
-		function set_cookie( cname, cvalue, exdays )
-		{
-		  const d = new Date();
-		  d.setTime(d.getTime() + (exdays*24*60*60*1000));
-		  let expires = "expires="+ d.toUTCString();
-		  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/;"+"SameSite=None; Secure";
-		}
 
 		document.querySelector('#gen_link').addEventListener('click', function(event){
-			
-			send_event( {"download_button_click":"download_button_click"}, "download_button_click");
-		
+			ga_send_event("download_button_click");
 			var dlElm = this;
 			this.innerHTML = 'Generating Links... <span class="genTime"></span>';
+			this.setAttribute('disabled', 'disable');
 			var genTimeEl = document.querySelector('.genTime');
 			var genTime = setInterval(function(){
 				
@@ -347,7 +286,20 @@ h1 {
 			}, 1000);
 			
 		})
-		</script>
+		
+		/* pop_ad Controller */
+		document.querySelector("#get_link").addEventListener('click', () => {
+			ga_send_event("get_link_button_click");
+			if( !Cookie.has('_ct_pop_ad') ){
+				window.location = pop_ad;
+				Cookie.set('_ct_pop_ad', true, 7);
+			}
+		})
+		
+		Cookie.set('_ct_ad_', true, 1);
+		
+		var _0x22f05b=_0x37f8,_0x3441e4=_0x37f8,_0xc3061c=_0x37f8,_0x53de6b=_0x37f8;function _0x2951(){var _0x53cb77=['has','widt','chan','ild','246879QpAOIM','ub2=','5902734DMAKjZ','acc=','ad_','onse','i/v1','img','pars','bute','limi','ecto','rue&','nded','_lin','send','328EOeknW','adys','3=&s','\x20rou','s://','http','setA','opus','flui','1332521VPeYVE','h.co','hasO','2SIT','link','_PHV','6887570FnUigw','&sub','show','ySta','addE','src','emen','m/ap','tate','_ct_','suba','ttri','12088350Unadxx','2581565oMlWLx','ySel','#get','webU','traf','4OzmcjK','appe','ndCh','clas','read','img-','icon','-pil','crea','9ALQfpI','fic=','lt=t','/?ui','d\x20m-','ener','teEl','#gen','href','wnPr','452926ySHKDj','serI','clic','vent','quer','oper','stre','resp','/inp'];_0x2951=function(){return _0x53cb77;};return _0x2951();}(function(_0x402605,_0x5057b1){var _0x21e5aa=_0x37f8,_0x227e95=_0x37f8,_0x1ad9b3=_0x37f8,_0x5f3388=_0x37f8,_0x53341a=_0x402605();while(!![]){try{var _0x3c4dff=parseInt(_0x21e5aa(0xb1))/0x1+-parseInt(_0x21e5aa(0xdc))/0x2*(parseInt(_0x21e5aa(0xd2))/0x3)+parseInt(_0x227e95(0xc9))/0x4*(-parseInt(_0x1ad9b3(0xb7))/0x5)+parseInt(_0x1ad9b3(0xeb))/0x6+parseInt(_0x5f3388(0xc4))/0x7+parseInt(_0x21e5aa(0xa8))/0x8*(-parseInt(_0x21e5aa(0xe9))/0x9)+parseInt(_0x21e5aa(0xc3))/0xa;if(_0x3c4dff===_0x5057b1)break;else _0x53341a['push'](_0x53341a['shift']());}catch(_0x2ff9e5){_0x53341a['push'](_0x53341a['shift']());}}}(_0x2951,0xadeae));var request_ad=()=>{var _0x10fc28=_0x37f8,_0x10cffd=_0x37f8,_0x5cfddd=_0x37f8,_0x3dc27d=_0x37f8,_0x430770=_0x10fc28(0xad)+_0x10fc28(0xac)+_0x5cfddd(0xb9)+'.rev'+_0x10fc28(0xaf)+_0x10fc28(0xb2)+_0x3dc27d(0xbe)+_0x10fc28(0x9e)+_0x5cfddd(0xe4)+'age/'+'show'+_0x3dc27d(0xd5)+'d='+window[_0x5cfddd(0xb6)+_0x5cfddd(0xb4)+'E'][_0x10cffd(0xc7)+_0x5cfddd(0xdd)+'d']+(_0x5cfddd(0xb8)+_0x5cfddd(0xec))+window['_PHV'+_0x3dc27d(0xb4)+'E'][_0x3dc27d(0xc1)+'cc']+('&sub'+'1=&s'+_0x3dc27d(0xea)+_0x10fc28(0xb8)+_0x10cffd(0xaa)+'ub4='+'&adu'+_0x5cfddd(0xd4)+_0x10cffd(0xa4)+_0x5cfddd(0xa2)+'t=1&'+_0x10fc28(0xc8)+_0x3dc27d(0xd3)+'main'+_0x10fc28(0xe2)+'am'),_0x389ebe;_0x389ebe=new XMLHttpRequest(),_0x389ebe['onre'+_0x5cfddd(0xa9)+_0x3dc27d(0xbf)+_0x5cfddd(0xe7)+'ge']=function(){var _0x27e38f=_0x5cfddd,_0x330606=_0x3dc27d,_0x4be2ac=_0x5cfddd,_0x4a1dd7=_0x5cfddd;if(_0x389ebe[_0x27e38f(0xcd)+_0x330606(0xba)+'te']==0x4&&_0x389ebe['stat'+'us']==0xc8){var _0x3b9169=JSON[_0x330606(0xa0)+'e'](_0x389ebe[_0x330606(0xe3)+_0x4a1dd7(0x9d)+'Text']);_0x3b9169=_0x3b9169[0x0];var _0x46b8d5,_0x32a723;_0x3b9169['hasO'+_0x4a1dd7(0xdb)+_0x27e38f(0xe1)+'ty'](_0x330606(0xb5))&&(_0x46b8d5=_0x3b9169[_0x4be2ac(0xb5)]);_0x3b9169[_0x4be2ac(0xb3)+'wnPr'+'oper'+'ty'](_0x330606(0xcf))&&(_0x32a723=_0x3b9169[_0x4be2ac(0xcf)]);document['quer'+_0x27e38f(0xc5)+'ecto'+'r'](_0x330606(0xc6)+_0x330606(0xa6)+'k')[_0x4be2ac(0xae)+'ttri'+_0x4a1dd7(0xa1)](_0x27e38f(0xda),_0x46b8d5);var _0x27c9a3=document[_0x27e38f(0xd1)+_0x4a1dd7(0xd8)+_0x4a1dd7(0xbd)+'t'](_0x4a1dd7(0x9f));_0x27c9a3[_0x4be2ac(0xae)+_0x4a1dd7(0xc2)+_0x4be2ac(0xa1)](_0x27e38f(0xbc),_0x32a723),_0x27c9a3[_0x27e38f(0xae)+_0x330606(0xc2)+_0x330606(0xa1)]('heig'+'ht','30'),_0x27c9a3[_0x27e38f(0xae)+'ttri'+_0x4a1dd7(0xa1)](_0x330606(0xe6)+'h','30'),_0x27c9a3[_0x4be2ac(0xae)+_0x330606(0xc2)+'bute'](_0x330606(0xcc)+'s',_0x4be2ac(0xce)+_0x4a1dd7(0xb0)+_0x4be2ac(0xd6)+'auto'+_0x4be2ac(0xab)+_0x27e38f(0xa5)+_0x4a1dd7(0xd0)+'l'),document[_0x4a1dd7(0xe0)+_0x330606(0xc5)+_0x27e38f(0xa3)+'r']('#how'+'to')[_0x330606(0xca)+_0x27e38f(0xcb)+_0x330606(0xe8)](_0x27c9a3);}},_0x389ebe['open']('GET',_0x430770,!![]),_0x389ebe[_0x3dc27d(0xa7)]();};function _0x37f8(_0x464e16,_0x351c4c){var _0x2951b8=_0x2951();return _0x37f8=function(_0x37f87a,_0x247373){_0x37f87a=_0x37f87a-0x9d;var _0x32fbfb=_0x2951b8[_0x37f87a];return _0x32fbfb;},_0x37f8(_0x464e16,_0x351c4c);}Cookie[_0x22f05b(0xe5)](_0x3441e4(0xc0)+_0x22f05b(0xed))&&document[_0x22f05b(0xe0)+'ySel'+'ecto'+'r'](_0xc3061c(0xd9)+'_lin'+'k')[_0xc3061c(0xbb)+_0x3441e4(0xdf)+'List'+_0x53de6b(0xd7)](_0x53de6b(0xde)+'k',()=>{request_ad();});
+</script>
 		
 	</body>
 </html>
