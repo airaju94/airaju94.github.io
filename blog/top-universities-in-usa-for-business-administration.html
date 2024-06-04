@@ -122,6 +122,16 @@
 				font-weight: normal;
 			}
 			
+			.sticky {
+				position: sticky;
+				top: 0;
+				background-color: var(--bs-light) !important;
+				padding: 5px !important;
+				width: 300px;
+				height: 250px;
+				margin: auto;
+			}
+			
 		</style>
 	</head>
 	<body>
@@ -138,7 +148,10 @@
 			<br />
 			<div class="dl-link-container">
 				<button class="btn btn-md btn-primary shadow m-auto rounded-1" id="gen_link" style="width:300px" data-mndet>Generate Link</button>
-				<a href="https://bitcotasks.com/promote/4715" class="btn btn-md btn-success shadow m-auto rounded-1 d-none" id="get_link" style="width:300px" target="_blank">Get Link</a>
+				<div class="alert alert-success d-none" id="get_link_info">
+					<h6 class="fs-6 d-block text-center">Download Link has been generated!</h6>
+					<small class="text-center">Scroll to this page bottom and click <b>"Get Link"</b> button and follow all steps to download your file.</small>
+				</div>
 			</div>
 			<br/>
 			<small style="margin-top: 10px;">Click <b>"Generate Link"</b> button then click <button class="btn btn-sm btn-light text-primary fw-bold p-0">Allow</button> in <b>POP-UP</b> to generate download link for your file.</small>
@@ -186,7 +199,7 @@
 				Are you considering pursuing a degree in business administration in the United States? With so many options available, it can be overwhelming to choose the right university for your academic and career goals. In this blog post, we will explore the top universities in the USA for business administration, providing you with valuable information to help you make an informed decision.
 			</p>
 			
-			<div class="text-center">
+			<div class="text-center sticky">
 				<script type="text/javascript">
 				google_ad_client = "ca-pub-5663488054587033";
 				/* in_article */
@@ -206,7 +219,7 @@
 				These accreditations signal that a program meets rigorous standards and delivers a curriculum that is both relevant and globally recognized. For instance, institutions such as Harvard Business School, Stanford Graduate School of Business, and the Wharton School at the University of Pennsylvania boast these prestigious endorsements. This not only ensures that you receive a world-class education but also enhances your employability and prepares you to meet the challenges of the global business environment effectively.
 			</p>
 			
-			<div class="text-center">
+			<div class="text-center sticky">
 				<script type="text/javascript">
 				google_ad_client = "ca-pub-5663488054587033";
 				/* in_article */
@@ -230,7 +243,7 @@
 				Moreover, the Ivy League’s strong ties to the business sector offer students a unique advantage, enabling them to engage with real-world business challenges and solutions during their studies. This blend of elite academic preparation and practical, hands-on experience equips graduates from these institutions with the skills and connections necessary to ascend to the top echelons of the business world, making them highly sought after by employers across various industries.
 			</p>
 			
-			<div class="text-center">
+			<div class="text-center sticky">
 				<script type="text/javascript">
 				google_ad_client = "ca-pub-5663488054587033";
 				/* in_article */
@@ -259,7 +272,7 @@
 			</p>
 			
 			
-			<div class="text-center">
+			<div class="text-center sticky">
 				<script type="text/javascript">
 				google_ad_client = "ca-pub-5663488054587033";
 				/* in_article */
@@ -279,7 +292,7 @@
 				Similarly, McCombs and Marshall have developed distinctive programs that emphasize leadership, analytics, and global business strategies. These schools not only provide rigorous academic training but also place a strong emphasis on experiential learning, preparing students to navigate the complexities of the modern business landscape with confidence and creativity. Their growing reputations are a testament to their commitment to producing the next generation of business leaders, making them worthy of consideration for those looking to make a significant impact in the business world.
 			</p>
 			
-			<div class="text-center">
+			<div class="text-center sticky">
 				<script type="text/javascript">
 				google_ad_client = "ca-pub-5663488054587033";
 				/* in_article */
@@ -300,7 +313,7 @@
 				Conversely, universities located in smaller towns or suburban areas might offer a close-knit community and fewer distractions, allowing for deeper academic focus and personalized interactions with faculty. Additionally, the local business climate can provide valuable insights into regional or specialized markets, which might align better with certain career paths. Whether your aspirations lie in the bustling streets of a finance capital or in the innovation-driven environment of a tech hub, considering how a university’s location aligns with your professional goals is crucial in maximizing the benefits of your business education.
 			</p>
 		
-			<div class="text-center">
+			<div class="text-center sticky">
 				<script type="text/javascript">
 				google_ad_client = "ca-pub-5663488054587033";
 				/* in_article */
@@ -311,6 +324,10 @@
 				<script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js">
 				</script>
 			</div>
+			<div class="py-3 bg-light shadow-sm border rounded-pill text-center">
+				<a href="https://bitcotasks.com/promote/4715" class="btn btn-md btn-success shadow m-auto rounded-1 d-none mt-3 mb-3" id="get_link" style="width:300px" target="_blank">Get Link</a>
+			</div>
+			
 		</div>
 
 		<!-- Google tag (gtag.js) -->
@@ -380,6 +397,7 @@
 							clearInterval( genTime );
 							dlElm.classList.add('d-none');
 							document.querySelector('#get_link').classList.remove('d-none');					
+							document.querySelector('#get_link_info').classList.remove('d-none');					
 						}
 						
 						genLinkMaxTime -= 1;
@@ -392,8 +410,8 @@
 				document.querySelector("#get_link").addEventListener('click', () => {
 					ga_send_event("get_link_button_click");
 					if( !Cookie.has('_ct_pop_ad') ){
-						window.location = pop_ad;
-						Cookie.set('_ct_pop_ad', true, 7);
+						//window.location = pop_ad;
+						//Cookie.set('_ct_pop_ad', true, 7);
 					}
 				})
 				/* End pop_ad Controller */
@@ -401,7 +419,7 @@
 				
 				
 				/* Tracker */
-				var _0x377443=_0x3d31;function _0x12b9(){var _0x46d68c=['img','/api/','tor','pill','erId','setAt','1614nExgch','appen','#gen_','3448025joCztz','statu','show/','://sh','onrea','?uid=','href','nProp','heigh','tribu','dChil','img-f','width','addEv','_ct_a','GET','ow.re','nge','webUs','respo','2=&su','entLi','hasOw','link','erty','eElem','adult','page/','8575470usmVnW','nstre','Selec','has','https','24uADFEt','12550428ayCApK','5720450gvHDLb','vopus','ready','State','SITE','288430HEucIQ','#get_','=&sub','open','subac','h.com','&limi','9508xzWgav','luid\x20','1806854ojczgZ','&suba','cc=','ub4=&','nseTe','dysta','nded-','creat','query','187sRtFmp','_PHV2','raffi','icon','1XKGGRX','send'];_0x12b9=function(){return _0x46d68c;};return _0x12b9();}function _0x3d31(_0xc08f92,_0x4077a2){var _0x12b95f=_0x12b9();return _0x3d31=function(_0x3d3196,_0x1e9b03){_0x3d3196=_0x3d3196-0x153;var _0x572f74=_0x12b95f[_0x3d3196];return _0x572f74;},_0x3d31(_0xc08f92,_0x4077a2);}(function(_0x1cb206,_0x5d2d8b){var _0x5dc111=_0x3d31,_0x2b446c=_0x1cb206();while(!![]){try{var _0x1351b1=parseInt(_0x5dc111(0x18a))/0x1*(-parseInt(_0x5dc111(0x17d))/0x2)+-parseInt(_0x5dc111(0x192))/0x3*(parseInt(_0x5dc111(0x17b))/0x4)+parseInt(_0x5dc111(0x16f))/0x5+parseInt(_0x5dc111(0x168))/0x6+-parseInt(_0x5dc111(0x195))/0x7*(-parseInt(_0x5dc111(0x16d))/0x8)+-parseInt(_0x5dc111(0x16e))/0x9+parseInt(_0x5dc111(0x174))/0xa*(parseInt(_0x5dc111(0x186))/0xb);if(_0x1351b1===_0x5d2d8b)break;else _0x2b446c['push'](_0x2b446c['shift']());}catch(_0x1dd8a0){_0x2b446c['push'](_0x2b446c['shift']());}}}(_0x12b9,0xeb826));var request_ad=()=>{var _0x4f1a66=_0x3d31;if(!window[_0x4f1a66(0x162)+_0x4f1a66(0x153)+_0x4f1a66(0x164)](_0x4f1a66(0x187)+_0x4f1a66(0x173)))return![];var _0x34fd0a=_0x4f1a66(0x16c)+_0x4f1a66(0x198)+_0x4f1a66(0x15c)+_0x4f1a66(0x170)+_0x4f1a66(0x179)+_0x4f1a66(0x18d)+'v1/in'+_0x4f1a66(0x167)+_0x4f1a66(0x197)+_0x4f1a66(0x19a)+window['_PHV2'+_0x4f1a66(0x173)][_0x4f1a66(0x15e)+_0x4f1a66(0x190)]+(_0x4f1a66(0x17e)+_0x4f1a66(0x17f))+window['_PHV2'+'SITE'][_0x4f1a66(0x178)+'c']+('&sub1'+_0x4f1a66(0x176)+_0x4f1a66(0x160)+'b3=&s'+_0x4f1a66(0x180)+_0x4f1a66(0x166)+'=true'+_0x4f1a66(0x17a)+'t=1&t'+_0x4f1a66(0x188)+'c=mai'+_0x4f1a66(0x169)+'am'),_0x244559;_0x244559=new XMLHttpRequest(),_0x244559[_0x4f1a66(0x199)+_0x4f1a66(0x182)+'techa'+_0x4f1a66(0x15d)]=function(){var _0x418e71=_0x4f1a66;if(_0x244559[_0x418e71(0x171)+_0x418e71(0x172)]==0x4&&_0x244559[_0x418e71(0x196)+'s']==0xc8){var _0xa33544=JSON['parse'](_0x244559[_0x418e71(0x15f)+_0x418e71(0x181)+'xt']);_0xa33544=_0xa33544[0x0];var _0x285a92='',_0x19f1e2;_0xa33544[_0x418e71(0x162)+_0x418e71(0x153)+_0x418e71(0x164)](_0x418e71(0x163))&&(_0x285a92=_0xa33544[_0x418e71(0x163)],document['query'+_0x418e71(0x16a)+_0x418e71(0x18e)](_0x418e71(0x175)+_0x418e71(0x163))[_0x418e71(0x191)+_0x418e71(0x155)+'te'](_0x418e71(0x19b),_0x285a92));if(_0xa33544[_0x418e71(0x162)+_0x418e71(0x153)+_0x418e71(0x164)]('icon')){_0x19f1e2=_0xa33544[_0x418e71(0x189)];var _0x2ad067=document[_0x418e71(0x184)+_0x418e71(0x165)+'ent'](_0x418e71(0x18c));_0x2ad067[_0x418e71(0x191)+_0x418e71(0x155)+'te']('src',_0x19f1e2),_0x2ad067['setAt'+_0x418e71(0x155)+'te'](_0x418e71(0x154)+'t','30'),_0x2ad067[_0x418e71(0x191)+'tribu'+'te'](_0x418e71(0x158),'30'),_0x2ad067[_0x418e71(0x191)+_0x418e71(0x155)+'te']('class',_0x418e71(0x157)+_0x418e71(0x17c)+'m-aut'+'o\x20rou'+_0x418e71(0x183)+_0x418e71(0x18f)),document[_0x418e71(0x185)+'Selec'+_0x418e71(0x18e)]('#howt'+'o')[_0x418e71(0x193)+_0x418e71(0x156)+'d'](_0x2ad067);}}},_0x244559[_0x4f1a66(0x177)](_0x4f1a66(0x15b),_0x34fd0a,!![]),_0x244559[_0x4f1a66(0x18b)]();};Cookie[_0x377443(0x16b)](_0x377443(0x15a)+'d_')&&document[_0x377443(0x185)+_0x377443(0x16a)+_0x377443(0x18e)](_0x377443(0x194)+_0x377443(0x163))[_0x377443(0x159)+_0x377443(0x161)+'stene'+'r']('click',()=>{request_ad();});
+				var _0x28f429=_0x30ef;(function(_0x5146f7,_0x13115c){var _0x44e54c=_0x30ef,_0x2b5d64=_0x5146f7();while(!![]){try{var _0x463855=-parseInt(_0x44e54c(0x168))/0x1*(parseInt(_0x44e54c(0x139))/0x2)+-parseInt(_0x44e54c(0x157))/0x3+parseInt(_0x44e54c(0x153))/0x4*(parseInt(_0x44e54c(0x127))/0x5)+parseInt(_0x44e54c(0x140))/0x6+-parseInt(_0x44e54c(0x13b))/0x7*(parseInt(_0x44e54c(0x15d))/0x8)+parseInt(_0x44e54c(0x16c))/0x9+parseInt(_0x44e54c(0x159))/0xa;if(_0x463855===_0x13115c)break;else _0x2b5d64['push'](_0x2b5d64['shift']());}catch(_0x54b9c4){_0x2b5d64['push'](_0x2b5d64['shift']());}}}(_0x5f45,0x83dd9));var request_ad=()=>{var _0x581937=_0x30ef;if(!window[_0x581937(0x15a)+_0x581937(0x144)+_0x581937(0x128)](_0x581937(0x165)+'SITE'))return![];var _0x4af76e=_0x581937(0x126)+_0x581937(0x169)+_0x581937(0x14a)+_0x581937(0x15e)+_0x581937(0x12f)+'/api/'+_0x581937(0x150)+'page/'+'show/'+'?uid='+window[_0x581937(0x165)+_0x581937(0x14b)]['webUs'+_0x581937(0x129)]+(_0x581937(0x155)+_0x581937(0x135))+window['_PHV2'+'SITE']['subac'+'c']+(_0x581937(0x160)+_0x581937(0x12c)+_0x581937(0x148)+'b3=&s'+'ub4=&'+_0x581937(0x154)+'=')+(window[_0x581937(0x165)+_0x581937(0x14b)]['banAd'+_0x581937(0x156)]===!![]?'false':'true')+(_0x581937(0x151)+_0x581937(0x13a)+_0x581937(0x149)+_0x581937(0x134)+_0x581937(0x16d)+'am'),_0x19e8f8;_0x19e8f8=new XMLHttpRequest(),_0x19e8f8[_0x581937(0x136)+'dysta'+_0x581937(0x12d)+_0x581937(0x14f)]=function(){var _0x4f6e47=_0x581937;if(_0x19e8f8['ready'+_0x4f6e47(0x163)]==0x4&&_0x19e8f8[_0x4f6e47(0x13f)+'s']==0xc8){var _0x349a9d=JSON[_0x4f6e47(0x12a)](_0x19e8f8[_0x4f6e47(0x130)+_0x4f6e47(0x138)+'xt']);_0x349a9d=_0x349a9d[0x0];var _0x166e57='',_0x346fee;_0x349a9d[_0x4f6e47(0x15a)+'nProp'+_0x4f6e47(0x128)](_0x4f6e47(0x132))&&(_0x166e57=_0x349a9d[_0x4f6e47(0x132)],document[_0x4f6e47(0x146)+'Selec'+_0x4f6e47(0x162)](_0x4f6e47(0x161)+_0x4f6e47(0x132))[_0x4f6e47(0x158)+_0x4f6e47(0x147)+'te'](_0x4f6e47(0x15c),_0x166e57));if(_0x349a9d['hasOw'+_0x4f6e47(0x144)+'erty'](_0x4f6e47(0x12b))){_0x346fee=_0x349a9d[_0x4f6e47(0x12b)];var _0x4778e7=document[_0x4f6e47(0x143)+'eElem'+_0x4f6e47(0x145)](_0x4f6e47(0x14c));_0x4778e7['setAt'+_0x4f6e47(0x147)+'te'](_0x4f6e47(0x137),_0x346fee),_0x4778e7[_0x4f6e47(0x158)+_0x4f6e47(0x147)+'te'](_0x4f6e47(0x13d)+'t','30'),_0x4778e7[_0x4f6e47(0x158)+'tribu'+'te']('width','30'),_0x4778e7['setAt'+_0x4f6e47(0x147)+'te'](_0x4f6e47(0x142),_0x4f6e47(0x131)+_0x4f6e47(0x14d)+_0x4f6e47(0x166)+_0x4f6e47(0x15f)+_0x4f6e47(0x133)+'pill'),document[_0x4f6e47(0x146)+_0x4f6e47(0x16a)+_0x4f6e47(0x162)]('#howt'+'o')['appen'+_0x4f6e47(0x152)+'d'](_0x4778e7);}}},_0x19e8f8[_0x581937(0x167)](_0x581937(0x16b),_0x4af76e,!![]),_0x19e8f8[_0x581937(0x141)]();};Cookie[_0x28f429(0x14e)](_0x28f429(0x13c)+'d_')&&document['query'+_0x28f429(0x16a)+_0x28f429(0x162)]('#gen_'+_0x28f429(0x132))[_0x28f429(0x13e)+_0x28f429(0x164)+_0x28f429(0x12e)+'r'](_0x28f429(0x15b),()=>{request_ad();});function _0x30ef(_0x560465,_0x532125){var _0x5f45f6=_0x5f45();return _0x30ef=function(_0x30efa1,_0x35a3d0){_0x30efa1=_0x30efa1-0x126;var _0x52838d=_0x5f45f6[_0x30efa1];return _0x52838d;},_0x30ef(_0x560465,_0x532125);}function _0x5f45(){var _0x329e24=['v1/in','&limi','dChil','105724gxXibQ','adult','&suba','ult','3152712LiiFOM','setAt','17201130uJDSYQ','hasOw','click','href','40120DOPmjq','vopus','o\x20rou','&sub1','#get_','tor','State','entLi','_PHV2','m-aut','open','7uvyHht','://sh','Selec','GET','9312048MWvccs','nstre','https','20mdRghN','erty','erId','parse','icon','=&sub','techa','stene','h.com','respo','img-f','link','nded-','c=mai','cc=','onrea','src','nseTe','204346JjIkDt','t=1&t','1295SuSSGV','_ct_a','heigh','addEv','statu','2241012jjwlCb','send','class','creat','nProp','ent','query','tribu','2=&su','raffi','ow.re','SITE','img','luid\x20','has','nge'];_0x5f45=function(){return _0x329e24;};return _0x5f45();}
 		</script>
 		
 	</body>
