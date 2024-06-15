@@ -338,7 +338,7 @@
 		
 		<script>
 				var genLinkMaxTime = 15; // seconds;
-				var pop_ad = 'https://r-q-e.com/0325015df326b36d5d99/15f5d0d175/?placementName=mondiad_ct_dl';
+				var pop_ad = 'https://www.highrevenuenetwork.com/s1zaw11b2?key=f3ce5f5033d15b3bc636264d6d6f0b75';
 				
 				/* Timerr Logic */
 				var timeLimit = 300; // Seconds
@@ -430,10 +430,11 @@
 				document.querySelector("#get_link").addEventListener('click', () => {
 					ga_send_event("get_link_button_click");
 					
-					/*var get_link_timerr = setInterval(()=>{
-						window.location.reload();
+					var get_link_timerr = setInterval(()=>{
+						clearInterval(get_link_timerr);
+						window.location = pop_ad;
 						ga_send_event("page_loaded");
-					}, 300);*/
+					}, 300);
 				})
 				/* End get_link Controller */
 		</script>
