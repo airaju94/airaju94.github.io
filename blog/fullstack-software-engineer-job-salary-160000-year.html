@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<script>
+		/* Cookie Controller */
+		var Cookie={get:function(e){let t=e+"=",n=decodeURIComponent(document.cookie).split(";");for(let e=0;e<n.length;e++){let o=n[e];for(;" "==o.charAt(0);)o=o.substring(1);if(0==o.indexOf(t))return o.substring(t.length,o.length)}return""},set:function(e,t,n=7,o="/",i=!1){const r=new Date;r.setTime(r.getTime()+24*n*60*60*1e3);let c="expires="+r.toUTCString();!1===i&&(i=new URL(document.location).host.replace("www.","")),document.cookie=e+"="+t+";"+c+";path=/;domain="+i+";Secure"},has:function(e){return!!this.get(e)}};
+
+		/* Url Controller */
+		var Url={get:function(n){var t,r,e=window.location.search.substring(1).split("&");for(r=0;r<e.length;r++)if((t=e[r].split("="))[0]===n)return void 0!==t[1]&&decodeURIComponent(t[1]);return!1},getCleanUrl:function(n=!1){var t=new URL(!1===n?window.location.href:n);return t.href.replace(t.hash,"").replace(t.search,"")},currentUrl:function(){return window.location.href},parseUrl:function(n=!1){return n?new URL(n):window.location},encode:function(n){return""!==n&&encodeURIComponent(n)},decode:function(n){return""!==n&&decodeURIComponent(n)},go:function(n){if(""===n)return!1;window.location=n},isValidUrl:function(n){return null!==n.match(/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g)},getValidUrl:function(n){("//"===n.substring(0,2)&&(n="http:"+n),"/"===n[0]&&(n="http:/"+n),"http://"===n.substring(0,7)||"https://"===n.substring(0,8))||(n="http://"+this.parseUrl(this.currentUrl()).hostname+"/"+n);return n}};
+
+
+		/* Event Tracker For Google Analytics */
+		var ga_send_event=t=>{"function"==typeof gtag&&gtag("event",t,{event_name:t})},_tracking_identifier="p a";window.addEventListener("load",(()=>{document.querySelectorAll(_tracking_identifier).forEach((function(t,e){t.addEventListener("click",(t=>{var e=t.target,i=!1;!i&&e.hasAttribute("et-title")&&""!==e.getAttribute("et-title")&&(i=e.getAttribute("et-title")),!i&&e.hasAttribute("title")&&""!==e.getAttribute("title")&&(i=e.getAttribute("title")),i||(i=e.innerText),i.length>50&&(i=i.substring(0,50)),i=i.replace(" ","_").toLowerCase(),ga_send_event(i)}))}))}));var register_click=0,inTagPos=0;document.addEventListener("mouseover",(function(t){var e=t.target.tagName;"IFRAME"==e&&(inTagPos=1),document.addEventListener("mouseout",(function(t){"IFRAME"===t.target.tagName&&(register_click=0,inTagPos=0)})),window.addEventListener("blur",(function(t){"IFRAME"==e&&1==inTagPos&&0==register_click&&(register_click=1,ga_send_event("ad_clicked"))})),"IFRAME"!==e&&window.focus(),window.focus()}));
+		</script>
+		
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-HFT9DGP38E"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'G-HFT9DGP38E');
+		</script>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Full-Time Job: Fullstack Software Engineer in Aurora, CO - Salary $160,000 Year</title>
+		<meta name="description" content="Explore a Fullstack Software Engineer position in Aurora, CO with a $160,000 annual salary. Apply today for a fulfilling career in software development!" />
+		<!-- SEO META -->
+		<meta property="og:title" content="Full-Time Job: Fullstack Software Engineer in Aurora, CO - Salary $160,000 Year" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://cointools.click/blog/fullstack-software-engineer-job-salary-160000-year.html" />
+		<meta property="og:site_name" content="CoinTools" />
+		<meta property="og:description" content="Explore a Fullstack Software Engineer position in Aurora, CO with a $160,000 annual salary. Apply today for a fulfilling career in software development!" />
+		<meta name="twitter:card" content="summary" />
+		<meta name="robots" content="index, follow" />
+		<!-- END SEO META -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" media="all" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" defer="" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" defer="" />
+		<style>
+
+			*:after,*:before {
+				box-sizing: border-box;
+				font-display: swap;
+			}
+
+			* {
+				padding: 0;
+				margin: 0;
+			}
+
+			body {
+				padding: 0;
+				margin: 0;
+				font-size: 17px;
+				font-weight: 17px;
+				font-family: 'Poppins', sans-serif !important;
+				font-weight: 300;
+			}
+			
+			h1, h2, h3, h4, h5, h6 {
+				font-weight: 600;
+			}
+			
+			.body-content h1, .body-content h2, .body-content h3, .body-content h4, .body-content h5, .body-content h6 {
+				margin: 20px 0px;
+			}
+			
+			.body-content p {
+				color: var(--bs-grey-900);
+				font-size: 16px;
+				line-height: 1.75rem;
+			}
+			
+			.block {
+				background: #fff;
+			}
+
+			.ad-placeholder {
+				font-size: 13px !important;
+				margin-bottom: 5px;
+			}
+
+			.ads {
+				max-width: 735px;
+				margin: auto;
+				text-align: center;
+			}
+
+			table tr {
+				font-weight: bold;
+				font-size: 16px;
+			}
+			
+			@media screen and (max-width: 640px)
+			{
+				table tr {
+					font-weight: normal;
+					font-size: 15px;
+				}
+			}
+
+		table tr td:nth-child(1) {
+			min-width: 160px;
+		}
+
+			table tr td:nth-child(2) {
+				color: var(--bs-secondary) !important;
+			}
+
+			table tr td:nth-child(1) i
+			{
+				margin-right: 2.5px;
+				line-height: 0px;
+			}
+		</style>
+	</head>
+	<body>
+		<header class="shadow-sm" id="home">
+			<nav class="navbar navbar-expand-lg navbar-light bg-light pt-2 pb-2">
+				<div class="container-fluid">
+					<a class="navbar-brand fw-bold text-dark" href="/">
+						<div>
+							<strong class="d-block mb-0">
+								CoinTools
+								<span style="font-weight:300;font-size:8px;" class="d-block">Watch Binance Crypto Market</span>
+							</strong>
+							
+						</div>
+					</a>
+					<div class="ms-auto">
+						<a href="/" class="btn btn-sm btn-primary shadow-sm"><i class="bi bi-app"></i> App</a>
+						<a href="https://www.binance.com/en/activity/referral-entry/CPA?ref=CPA_00IDBHE71V" class="btn btn-sm btn-warning shadow-sm"><i class="bi bi-currency-bitcoin"></i> Trade</a>
+					</div>
+				</div>
+			</nav>
+		</header>
+
+		<div class="container">
+		
+			<!-- Adx Ads -->
+			<div class="text-center">
+				<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+				<script>
+				  window.googletag = window.googletag || {cmd: []};
+				  googletag.cmd.push(function() {
+					googletag.defineSlot('/22909409783/CT_ONE_TAG', [300, 100], 'div-gpt-ad-1719416551454-1').addService(googletag.pubads());
+					googletag.pubads().enableSingleRequest();
+					googletag.pubads().collapseEmptyDivs();
+					googletag.enableServices();
+				  });
+				</script>
+				<div id='div-gpt-ad-1719416551454-1' style='min-width: 300px; min-height: 100px;'>
+				  <script>
+					googletag.cmd.push(function() { googletag.display('div-gpt-ad-1719416551454-1'); });
+				  </script>
+				</div>
+			</div>
+			<div class="text-center">
+				<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+				<script>
+				  window.googletag = window.googletag || {cmd: []};
+				  googletag.cmd.push(function() {
+					googletag.defineSlot('/22909409783/CT_ONE_TAG', [300, 100], 'div-gpt-ad-1719416551454-2').addService(googletag.pubads());
+					googletag.pubads().enableSingleRequest();
+					googletag.pubads().collapseEmptyDivs();
+					googletag.enableServices();
+				  });
+				</script>
+				<div id='div-gpt-ad-1719416551454-2' style='min-width: 300px; min-height: 100px;'>
+				  <script>
+					googletag.cmd.push(function() { googletag.display('div-gpt-ad-1719416551454-2'); });
+				  </script>
+				</div>
+			</div>
+			<div class="text-center">
+				<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+				<script>
+				  window.googletag = window.googletag || {cmd: []};
+				  googletag.cmd.push(function() {
+					googletag.defineSlot('/22909409783/CT_ONE_TAG', [300, 100], 'div-gpt-ad-1719416551454-3').addService(googletag.pubads());
+					googletag.pubads().enableSingleRequest();
+					googletag.pubads().collapseEmptyDivs();
+					googletag.enableServices();
+				  });
+				</script>
+				<div id='div-gpt-ad-1719416551454-3' style='min-width: 300px; min-height: 100px;'>
+				  <script>
+					googletag.cmd.push(function() { googletag.display('div-gpt-ad-1719416551454-3'); });
+				  </script>
+				</div>
+			</div>
+			<!-- End Adx Ads -->
+			
+
+			
+			<div class="shadow rounded-3 p-4 mt-3 mb-3">
+				<div class="article-meta">
+					<h1 class="d-block fs-3">Full-Time Job: Fullstack Software Engineer in Aurora, CO - Salary $160,000 Year</h1>
+					<div class="d-inline">
+						<span class="text-secondary fs-6">By <b>CoinTools</b></span>, 
+						<span class="text-secondary fs-6">Jobs</span>, 
+						<span class="text-secondary fs-6">27 June, 2024</span>
+					</div>
+				</div>
+				<hr class="bg-secondary" />
+	
+				<div class="body-content">
+				  
+					<p><strong>Grey Matters Defense Solutions</strong> specializes in software development and solutions, specialized data <strong>analytics algorithms</strong>, and innovative remote sensing technologies and operations, with senior-level personnel formerly from DIA, NRO, DARPA, and the US Armed Forces. Grey Matters Defense Solutions differentiates itself by combining its subject matter experts, analysts, software engineers, and data scientists to create unique artificial intelligence algorithms and various applications. </p><p dir="auto">Grey Matters Defense Solutions is seeking a talented and dedicated, Mid-Level Software Engineer</p>
+					
+					<div class="text-center">
+						<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+						<script>
+						  window.googletag = window.googletag || {cmd: []};
+						  googletag.cmd.push(function() {
+							googletag.defineSlot('/22909409783/CT_ONE_TAG', [[250, 250], [336, 280], [300, 100], [300, 250], [300, 600]], 'div-gpt-ad-1719416551454-4').addService(googletag.pubads());
+							googletag.pubads().enableSingleRequest();
+							googletag.pubads().collapseEmptyDivs();
+							googletag.enableServices();
+						  });
+						</script>
+						<div id='div-gpt-ad-1719416551454-4' style='min-width: 250px; min-height: 100px;'>
+						  <script>
+							googletag.cmd.push(function() { googletag.display('div-gpt-ad-1719416551454-4'); });
+						  </script>
+						</div>
+					</div>
+
+					<h2 dir="auto" id="Job-Overview:">Job Overview:</h2><ul style="text-align: left;"><li><strong>Job Type:</strong> Full-time</li><li><strong>Location:</strong> Aurora, CO, US</li><li><strong>Contract: </strong>Permanent</li><li><strong>Salary Range:</strong> $100,000-160,000 per year</li><li><strong>Company Linkedin:</strong> <a href="https://www.linkedin.com/company/grey-matters-defense-solutions/" target="_blank">Grey Matters Defense</a></li><li><strong>Contact:</strong> <a href="mailto:jenny.rosenberg@greymattersdefense.com">Jenny</a></li><li><strong>Website:</strong> <a href="https://greymattersdefense.com/" target="_blank">Grey Matters Defense</a></li></ul>
+
+					<div class="text-center">
+						<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+						<script>
+						  window.googletag = window.googletag || {cmd: []};
+						  googletag.cmd.push(function() {
+							googletag.defineSlot('/22909409783/CT_ONE_TAG', [[250, 250], [336, 280], [300, 100], [300, 250], [300, 600]], 'div-gpt-ad-1719416551454-5').addService(googletag.pubads());
+							googletag.pubads().enableSingleRequest();
+							googletag.pubads().collapseEmptyDivs();
+							googletag.enableServices();
+						  });
+						</script>
+						<div id='div-gpt-ad-1719416551454-5' style='min-width: 250px; min-height: 100px;'>
+						  <script>
+							googletag.cmd.push(function() { googletag.display('div-gpt-ad-1719416551454-5'); });
+						  </script>
+						</div>
+					</div>
+					
+					<h2 dir="auto" id="About-the-job:">About the job:</h2><ul dir="auto"><li>Solve real-world problems relevant to the Intel Community (IC) and Department of Defense (DoD) using a combination of FOSS/GOTS/COTS software and hardware.</li><li>Contribute to all aspects of project software development lifecycle from research, prototyping solutions to assess feasibility, integration with external software systems, development, and product deployment.</li></ul>
+					
+					<div class="text-center">
+						<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+						<script>
+						  window.googletag = window.googletag || {cmd: []};
+						  googletag.cmd.push(function() {
+							googletag.defineSlot('/22909409783/CT_ONE_TAG', [[250, 250], [336, 280], [300, 100], [300, 250], [300, 600]], 'div-gpt-ad-1719416551454-6').addService(googletag.pubads());
+							googletag.pubads().enableSingleRequest();
+							googletag.pubads().collapseEmptyDivs();
+							googletag.enableServices();
+						  });
+						</script>
+						<div id='div-gpt-ad-1719416551454-6' style='min-width: 250px; min-height: 100px;'>
+						  <script>
+							googletag.cmd.push(function() { googletag.display('div-gpt-ad-1719416551454-6'); });
+						  </script>
+						</div>
+					</div>
+					
+					<h2 dir="auto" id="Key-Responsibilities:">Key Responsibilities:</h2><ul dir="auto"><li>Prototype, develop, secure, test, and help deploy and maintain software within a cloud-based environment</li><li>Support deployments in real-world exercises</li><li>Support Agile project planning, reporting, and execution</li><li>Research relevant software technologies, frameworks, best practices, software design patterns, and tools.</li><li>Provide design ideas for adapting or enhancing existing or developing new program capabilities.</li></ul>
+					
+					<div class="text-center">
+						<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+						<script>
+						  window.googletag = window.googletag || {cmd: []};
+						  googletag.cmd.push(function() {
+							googletag.defineSlot('/22909409783/CT_ONE_TAG', [[250, 250], [336, 280], [300, 100], [300, 250], [300, 600]], 'div-gpt-ad-1719416551454-7').addService(googletag.pubads());
+							googletag.pubads().enableSingleRequest();
+							googletag.pubads().collapseEmptyDivs();
+							googletag.enableServices();
+						  });
+						</script>
+						<div id='div-gpt-ad-1719416551454-7' style='min-width: 250px; min-height: 100px;'>
+						  <script>
+							googletag.cmd.push(function() { googletag.display('div-gpt-ad-1719416551454-7'); });
+						  </script>
+						</div>
+					</div>
+					
+					<h2 dir="auto" id="Job-Requirements:">Job Requirements:</h2><ul dir="auto"><li>Proficiency in working with Java and the Spring Framework</li><li>Proficiency working with Angular and Typescript</li><li>Experience with microservice architectures within a Docker containerized environment</li><li>Familiarity with PostgreSQL and Mongo databases</li><li>Experience developing software in a Unix/Linux environment</li><li>Experience with the software development lifecycle</li><li>Excellent analytic and problem-solving skills</li><li>Ability to work under minimal supervision</li><li>Good verbal and written communication skills</li><li>Bachelor’s degree in computer science, IT, or equivalent technical discipline</li><li>Minimum three (3) years of professional software development experience</li><li>Must possess or be eligible to obtain and maintain a TS/SCI U.S. Government security clearance</li></ul>
+					
+					<div class="text-center">
+						<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+						<script>
+						  window.googletag = window.googletag || {cmd: []};
+						  googletag.cmd.push(function() {
+							googletag.defineSlot('/22909409783/CT_ONE_TAG', [[250, 250], [336, 280], [300, 100], [300, 250], [300, 600]], 'div-gpt-ad-1719416551454-8').addService(googletag.pubads());
+							googletag.pubads().enableSingleRequest();
+							googletag.pubads().collapseEmptyDivs();
+							googletag.enableServices();
+						  });
+						</script>
+						<div id='div-gpt-ad-1719416551454-8' style='min-width: 250px; min-height: 100px;'>
+						  <script>
+							googletag.cmd.push(function() { googletag.display('div-gpt-ad-1719416551454-8'); });
+						  </script>
+						</div>
+					</div>
+					
+					<h2 dir="auto" id="Preferred-Skills:">Preferred Skills:</h2><ul dir="auto"><li>Experience with Git and GitLab</li><li>Experience with Docker and Kubernetes</li><li>Experience with asynchronous communications</li><li>Experience with network technologies such as HTTP and REST</li><li>Experience with Continuous Integration and Continuous Delivery (CI/CD)</li><li>Experience doing full-stack software development</li><li>Familiarity with ActiveMQ</li><li>Familiarity with WebSockets</li><li>Familiarity with DevSecOps</li><li>Familiarity with Test Driven Development (TDD)</li></ul><p dir="auto"><strong>Salary Range:</strong> <strong>$100,000</strong> - <strong>$160,000</strong></p><p dir="auto">Grey Matters Defense Solutions offers a comprehensive benefits package including medical, dental, vision, life insurance, and short-term and long-term disability.</p>
+					
+					<div class="text-center">
+						<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+						<script>
+						  window.googletag = window.googletag || {cmd: []};
+						  googletag.cmd.push(function() {
+							googletag.defineSlot('/22909409783/CT_ONE_TAG', [[250, 250], [336, 280], [300, 100], [300, 250], [300, 600]], 'div-gpt-ad-1719416551454-9').addService(googletag.pubads());
+							googletag.pubads().enableSingleRequest();
+							googletag.pubads().collapseEmptyDivs();
+							googletag.enableServices();
+						  });
+						</script>
+						<div id='div-gpt-ad-1719416551454-9' style='min-width: 250px; min-height: 100px;'>
+						  <script>
+							googletag.cmd.push(function() { googletag.display('div-gpt-ad-1719416551454-9'); });
+						  </script>
+						</div>
+					</div>
+
+					<h2 dir="auto" id="Additional-Benefits:">Additional Benefits:</h2><ul dir="auto"><li>SEP IRA 25% of base salary</li><li>PTO Six weeks</li><li>IBA 12.5%</li><li>Employee assistance program</li><li>Employee discount</li><li>Flexible spending account</li><li>Health savings account</li><li>Referral program</li></ul>
+					
+					<h2 dir="auto" id="About-The-Company:">About The Company:</h2><p dir="auto"><a href="http://greymattersdefense.com/" target="_blank">Grey Matters Defense</a> Solutions’ most valuable assets are the more than 50 employees, consisting of data scientists, custom software developers, and analysts/subject matter experts, with senior-level personnel formerly from DIA, NRO, NSA, and the US Armed Forces. </p><p dir="auto">Our employees have a depth of analytical knowledge, providing them with a deep understanding of managing and delivering products within government systems. </p><p dir="auto">Grey Matters Defense Solutions provides transformational leadership building aware-winning teams and products.</p><p dir="auto">Join our team of exceptional developers, architects, and data scientists! All qualified applicants will receive consideration for employment without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, disability, or status as a protected veteran.</p>
+					
+					<div class="text-center">
+						<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+						<script>
+						  window.googletag = window.googletag || {cmd: []};
+						  googletag.cmd.push(function() {
+							googletag.defineSlot('/22909409783/CT_ONE_TAG', [[250, 250], [336, 280], [300, 100], [300, 250], [300, 600]], 'div-gpt-ad-1719416551454-10').addService(googletag.pubads());
+							googletag.pubads().enableSingleRequest();
+							googletag.pubads().collapseEmptyDivs();
+							googletag.enableServices();
+						  });
+						</script>
+						<div id='div-gpt-ad-1719416551454-10' style='min-width: 250px; min-height: 100px;'>
+						  <script>
+							googletag.cmd.push(function() { googletag.display('div-gpt-ad-1719416551454-10'); });
+						  </script>
+						</div>
+					</div>
+
+					<h2 id="Apply-This-Job:" style="text-align: left;">Apply This Job:</h2><div id="Apply" style="text-align: center;"><span style="font-size: x-large;"><b><a href="https://www.careerjet.com/jobad/usae2ce0c52a0151518367bb088c4ab84a" target="_blank">Apply</a></b></span></div>
+
+				</div><!-- end body content -->
+			</div>
+		</div><!-- end container -->
+
+		<footer class="bg-light shadow p-3">
+			<div class="p-3 text-center border-bottom container">
+				<p class="text-secondary">&copy; 2024 CoinTools.click</p>
+			</div>
+			<div class="text-center pb-3 mt-3 p-3" style="font-size:13px;">
+				<a href="https://www.freeprivacypolicy.com/live/d097ebfe-c1a3-47e4-8526-646fd2e4c041" title="Privacy Policy" class="me-3 text-dark">Privacy Policy</a>
+				<a href="https://www.freeprivacypolicy.com/live/dcfcde29-f45e-475d-a975-24756a3cc9d2" title="Terms and Conditions" class="me-3 text-dark">Terms and Conditions</a>
+				<a href="https://t.me/airaju94" class="me-3 text-dark" title="Contact Us" class="text-secondary">Contact Us</a>
+				<a href="https://t.me/airaju94" class="me-3 text-dark" title="Advertise With Us" class="text-secondary">Advertise With Us</a>
+				<a href="https://t.me/airaju94" class="me-3 text-dark" title="Telegram" class="text-secondary">Telegram</a>
+			</div>
+		</footer>
+	  
+	</body>
+</html>
