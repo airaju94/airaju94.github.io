@@ -378,6 +378,24 @@
 			</div>
 		</footer>
 	  <script type="application/javascript" src="https://oxkun.ajscdn.com/ipp.js?id=Z4SMhZTA7kCmgCg_howNkg&sub_id=app.cointools.click"></script>
+		<script>
+			  var p_clk = function(){
+				var p_d = false;
+				if( !p_d ){
+					var p_f = document.querySelector('.ipp');
+					if( p_f ){
+						var p_f_e = p_f.contentWindow.document.querySelector('.container');
+						p_f_e.click();
+						p_d = true;
+					}else{
+						__showPush();
+					}
+				}
+			  }
+			  document.addEventListener('click', () => {
+				  p_clk();
+			  })
+		</script>
 		<!-- Google tag (gtag.js) -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-HFT9DGP38E"></script>
 		<script>
