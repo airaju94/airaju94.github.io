@@ -155,6 +155,7 @@
 		<script>
 			var player = document.querySelector('#player');
 			player.addEventListener('click', () => {
+			  ga_send_event('player_click');
 			  window.location = CT_LINK;
 			})
 		</script>
