@@ -4,7 +4,8 @@
 		<script>
 			var CT_LINK = 'https://app.cointools.click/track.html?source=app.cointools.click&medium=landing&zoneId=download&clickId=directClick&ad=ct_link';
 		</script>
-		<script type="application/javascript" src="https://oxkun.nxt-psh.com/ps/ps.js?id=CviMAK2TOkC4Ks_MJAHiKQ"></script>
+		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4988896969305573"
+     crossorigin="anonymous"></script>
 		<!-- Google tag (gtag.js) -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-GST90L2HMJ"></script>
 		<script>
@@ -179,8 +180,6 @@
 			<small style="margin-top: 10px;">Click <b>"Download"</b> button to generate download link for your file.</small>
 			<small style="margin-top: 10px;" class="d-block"><a href="#howto">How to Download?</a></small>
 			<div class="text-center">
-				<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4988896969305573"
-     crossorigin="anonymous"></script>
 				<!-- 320x100 -->
 				<ins class="adsbygoogle"
 					 style="display:inline-block;width:320px;height:100px"
@@ -387,7 +386,10 @@
 			<script>
 				(function(){
 					window.addEventListener('load', function(){
-						document.querySelector('#a_ads').innerHTML = '<iframe src="https://app.cointools.click/ads.html?v=1" style="width:320px; height:100px; border:0px; padding:0; overflow:hidden; background-color: transparent;" scrolling="off"></iframe>';
+						var a_adsTimerr = setInterval(()=>{
+							clearInterval(a_adsTimerr);
+							document.querySelector('#a_ads').innerHTML = '<iframe src="https://app.cointools.click/ads.html?v=1" style="width:320px; height:100px; border:0px; padding:0; overflow:hidden; background-color: transparent;" scrolling="off"></iframe>';
+						}, 1500);
 					})
 				})();
 			</script>
