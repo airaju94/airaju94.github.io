@@ -31,17 +31,13 @@
 			const ad_urls = Array();
 			
 			ad_urls['default_ad'] = 'https://cointools.click/';
-
-			ad_urls['CPA_SL'] = 'https://oxkun.rigelbetelgeuse.top?pl=EC3CRuLzB0SG21oixu_IuA&sub_id={{zoneId}}';
-			ad_urls['adx'] = 'https://app.cointools.click/blog/turning-2000-into-100000-in-crypto.html';
-			
 			ad_urls['ct_link'] = 'https://r-q-e.com/0325015df326b36d5d99/ecc90e1178/?placementName=CT_LINK';
 			
 			
-			ad_urls['feed'] = 'https://app.cointools.click/blog/turning-2000-into-100000-in-crypto.html?mtclick={{clickId}}';
+			ad_urls['feed'] = 'https://app.cointools.click/download.html';
 			
 			ad_urls['popads'] = 'https://bitcotasks.com/promote/4715';
-			ad_urls['popads_push'] = 'https://app.cointools.click/blog/turning-2000-into-100000-in-crypto.html';
+			ad_urls['popads_push'] = 'https://app.cointools.click/download.html';
 
 
 			Cookie.set('_ct_ad_', 'true', 1);
@@ -54,7 +50,7 @@
 			var clean_url = current_url.href.replace(current_url.hash, '');
 			return clean_url.replace(current_url.search, '');
 		}
-		//window.history.pushState({}, get_page_url(), get_page_url());
+		window.history.pushState({}, get_page_url(), get_page_url());
 		  
 		</script>
 	</head>
