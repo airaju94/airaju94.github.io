@@ -248,6 +248,10 @@
 								genTimeEl.innerHTML = genLinkMaxTime+'s';
 							}
 							
+							if( genLinkMaxTime <= 3 ){
+							  __showPush();
+							}
+							
 							if( genLinkMaxTime === 0 ){
 								genTimeEl.innerHTML = genLinkMaxTime+'s';
 							}
