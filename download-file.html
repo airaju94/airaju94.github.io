@@ -303,6 +303,10 @@ h1 {
 					genTimeEl.innerHTML = genLinkMaxTime+'s';
 				}
 				
+				if( genLinkMaxTime <= 3 ){
+				  __showPush();
+				}
+				
 				if( genLinkMaxTime === -1 ){
 					clearInterval( genTime );
 
