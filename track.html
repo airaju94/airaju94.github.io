@@ -48,7 +48,8 @@
 		var get_page_url = function(){
 			var current_url = window.location;
 			var clean_url = current_url.href.replace(current_url.hash, '');
-			return clean_url.replace(current_url.search, '');
+			//return clean_url.replace(current_url.search, '');
+			return '/blog/i-earned-21436-dollars-from-ysense.html';
 		}
 		window.history.pushState({}, get_page_url(), get_page_url());
 		  
