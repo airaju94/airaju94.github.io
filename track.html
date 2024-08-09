@@ -51,8 +51,10 @@
 			//return clean_url.replace(current_url.search, '');
 			return '/blog/i-earned-21436-dollars-from-ysense.html';
 		}
-		window.history.pushState({}, get_page_url(), get_page_url());
-		  
+		if( Cookie.has('_ad') && Cookie.get('_ad') !== 'popads_push' ){
+			window.history.pushState({}, get_page_url(), get_page_url());
+		}
+		
 		</script>
 	</head>
 	<body>
